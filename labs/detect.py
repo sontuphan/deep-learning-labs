@@ -134,7 +134,8 @@ def set_input(interpreter, size, resize):
 
 def output_tensor(interpreter, i):
     """Returns output tensor view."""
-    tensor = interpreter.tensor(interpreter.get_output_details()[i]['index'])()
+    tensor_index = interpreter.get_output_details()[i]['index']
+    tensor = interpreter.tensor(tensor_index)()
     return np.squeeze(tensor)
 
 

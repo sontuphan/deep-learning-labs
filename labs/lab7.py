@@ -59,7 +59,7 @@ def main():
 
     cam = camera.Camera()
     stream = cam.get_stream()
-    print("you can press Q button to terminate the process!")
+    print("You can press Q button to terminate the process!")
 
     while True:
         image = load_image(stream)
